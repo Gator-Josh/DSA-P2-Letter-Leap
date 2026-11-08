@@ -1,0 +1,14 @@
+# ninja log v7
+491	567	8158700260414134	CMakeFiles/letter_leap.dir/src/BK_Tree.cpp.obj	643db9deceb65889
+418	1839	8158729109149467	CMakeFiles/letter_leap.dir/src/main.cpp.obj	27c7cf388b34d993
+483	816	8158700260328245	CMakeFiles/letter_leap.dir/src/Trie.cpp.obj	10f19d3e46883034
+500	943	8158700260499312	CMakeFiles/letter_leap.dir/src/WordLoader.cpp.obj	958b6b8b5bc8169e
+1999	2221	8158729124963548	letter_leap.exe	ff894931a71e22ce
+15	412	8158729108441563	letter_leap_autogen/timestamp	edbdac42f17a1ae9
+15	412	8158729108441563	letter_leap_autogen/mocs_compilation.cpp	edbdac42f17a1ae9
+15	412	8158729108441563	D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/letter_leap_autogen/timestamp	edbdac42f17a1ae9
+15	412	8158729108441563	D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/letter_leap_autogen/mocs_compilation.cpp	edbdac42f17a1ae9
+412	1830	8158729109089479	CMakeFiles/letter_leap.dir/letter_leap_autogen/mocs_compilation.cpp.obj	7ff1871f05e113b4
+425	1999	8158729109225817	CMakeFiles/letter_leap.dir/src/mainwindow.cpp.obj	94cf60bd7aeab668
+423	1902	8158725380392923	CMakeFiles/letter_leap.dir/src/homepage.cpp.obj	a6ea827b90ab7ae5
+429	1846	8158725380458004	CMakeFiles/letter_leap.dir/src/playpage.cpp.obj	fda8ea97cbea6462

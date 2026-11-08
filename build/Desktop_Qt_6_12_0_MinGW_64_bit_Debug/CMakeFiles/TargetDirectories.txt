@@ -1,0 +1,5 @@
+D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/CMakeFiles/letter_leap.dir
+D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/CMakeFiles/edit_cache.dir
+D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/CMakeFiles/rebuild_cache.dir
+D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/CMakeFiles/letter_leap_autogen_timestamp_deps.dir
+D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/CMakeFiles/letter_leap_autogen.dir
