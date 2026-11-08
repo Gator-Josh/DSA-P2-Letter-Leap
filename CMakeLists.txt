@@ -11,4 +11,6 @@ add_executable(
         src/Trie.h
         src/BK_Tree.cpp
         src/BK_Tree.h
+        src/wordLoader.cpp
+        src/wordLoader.h
 )

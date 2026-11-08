@@ -20,17 +20,15 @@ struct TrieNode {
 };
 
 class Trie {
-private:
     TrieNode* root;
-public:
-    Trie() {
-        root = new TrieNode();
-    }
-    bool isLeaf;
-    void insert(const string& key);
-    bool search(const string &target) const;
-    vector<string> neighbors(const string &current) const;
-    string hint(const string &current, const string &target) const;
+    public:
+        Trie() {
+            root = new TrieNode();
+        }
+        bool isLeaf;
+        void insert(const string& key);
+        bool search(const string &target) const;
+        vector<string> neighbors(const string &current) const;
 };
 
 
