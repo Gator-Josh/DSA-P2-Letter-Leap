@@ -790,6 +790,8 @@ D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/src/homepage.cpp
  uic:ui_homepage.h
 D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/src/playpage.h
  mmc:Q_OBJECT
+ mdp:D:/Qt/6.12.0/mingw_64/include/QtCore/QString
+ mdp:D:/Qt/6.12.0/mingw_64/include/QtCore/QVector
  mdp:D:/Qt/6.12.0/mingw_64/include/QtCore/q17memory.h
  mdp:D:/Qt/6.12.0/mingw_64/include/QtCore/q20bit.h
  mdp:D:/Qt/6.12.0/mingw_64/include/QtCore/q20functional.h
@@ -916,6 +918,7 @@ D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/src/playpage.h
  mdp:D:/Qt/6.12.0/mingw_64/include/QtCore/qutf8stringview.h
  mdp:D:/Qt/6.12.0/mingw_64/include/QtCore/qvariant.h
  mdp:D:/Qt/6.12.0/mingw_64/include/QtCore/qvarlengtharray.h
+ mdp:D:/Qt/6.12.0/mingw_64/include/QtCore/qvector.h
  mdp:D:/Qt/6.12.0/mingw_64/include/QtCore/qversiontagging.h
  mdp:D:/Qt/6.12.0/mingw_64/include/QtCore/qxptype_traits.h
  mdp:D:/Qt/6.12.0/mingw_64/include/QtCore/qyieldcpu.h

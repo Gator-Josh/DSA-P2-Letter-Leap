@@ -31,6 +31,11 @@ MainWindow::MainWindow(QWidget *parent)
     });
     connect(m_home, &HomePage::quitRequested, this, &QMainWindow::close);
 
+    //Play Buttons
+    connect(m_play, &PlayPage::backRequested, this, [this]() {
+        m_stack->setCurrentWidget(m_home);
+    });
+
 }
 
 MainWindow::~MainWindow()

@@ -11,7 +11,12 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QScrollArea>
+#include <QtWidgets/QSpacerItem>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -19,16 +24,69 @@ QT_BEGIN_NAMESPACE
 class Ui_PlayPage
 {
 public:
+    QVBoxLayout *verticalLayout;
     QLabel *playLabel;
+    QScrollArea *tileScroll;
+    QWidget *scrollAreaWidgetContents;
+    QHBoxLayout *horizontalLayout;
+    QSpacerItem *horizontalSpacer_2;
+    QPushButton *backButton;
+    QSpacerItem *horizontalSpacer;
+    QPushButton *solutionButton;
+    QSpacerItem *horizontalSpacer_3;
 
     void setupUi(QWidget *PlayPage)
     {
         if (PlayPage->objectName().isEmpty())
             PlayPage->setObjectName("PlayPage");
-        PlayPage->resize(400, 300);
+        PlayPage->resize(782, 446);
+        verticalLayout = new QVBoxLayout(PlayPage);
+        verticalLayout->setObjectName("verticalLayout");
         playLabel = new QLabel(PlayPage);
         playLabel->setObjectName("playLabel");
-        playLabel->setGeometry(QRect(170, 120, 49, 16));
+
+        verticalLayout->addWidget(playLabel);
+
+        tileScroll = new QScrollArea(PlayPage);
+        tileScroll->setObjectName("tileScroll");
+        tileScroll->setFrameShape(QFrame::Shape::NoFrame);
+        tileScroll->setVerticalScrollBarPolicy(Qt::ScrollBarPolicy::ScrollBarAlwaysOff);
+        tileScroll->setHorizontalScrollBarPolicy(Qt::ScrollBarPolicy::ScrollBarAlwaysOff);
+        tileScroll->setWidgetResizable(true);
+        scrollAreaWidgetContents = new QWidget();
+        scrollAreaWidgetContents->setObjectName("scrollAreaWidgetContents");
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 764, 374));
+        tileScroll->setWidget(scrollAreaWidgetContents);
+
+        verticalLayout->addWidget(tileScroll);
+
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName("horizontalLayout");
+        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer_2);
+
+        backButton = new QPushButton(PlayPage);
+        backButton->setObjectName("backButton");
+
+        horizontalLayout->addWidget(backButton);
+
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer);
+
+        solutionButton = new QPushButton(PlayPage);
+        solutionButton->setObjectName("solutionButton");
+
+        horizontalLayout->addWidget(solutionButton);
+
+        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer_3);
+
+
+        verticalLayout->addLayout(horizontalLayout);
+
 
         retranslateUi(PlayPage);
 
@@ -39,6 +97,8 @@ public:
     {
         PlayPage->setWindowTitle(QCoreApplication::translate("PlayPage", "Form", nullptr));
         playLabel->setText(QCoreApplication::translate("PlayPage", "TextLabel", nullptr));
+        backButton->setText(QCoreApplication::translate("PlayPage", "Back to Menu", nullptr));
+        solutionButton->setText(QCoreApplication::translate("PlayPage", "Show Solution", nullptr));
     } // retranslateUi
 
 };

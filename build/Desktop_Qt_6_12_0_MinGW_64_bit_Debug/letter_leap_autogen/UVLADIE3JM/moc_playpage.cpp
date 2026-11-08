@@ -38,10 +38,23 @@ template <> constexpr inline auto PlayPage::qt_create_metaobjectdata<qt_meta_tag
 {
     namespace QMC = QtMocConstants;
     QtMocHelpers::StringRefStorage qt_stringData {
-        "PlayPage"
+        "PlayPage",
+        "backRequested",
+        "",
+        "wordSubmitted",
+        "word",
+        "solutionRequested"
     };
 
     QtMocHelpers::UintData qt_methods {
+        // Signal 'backRequested'
+        QtMocHelpers::SignalData<void()>(1, 2, QMC::AccessPublic, QMetaType::Void),
+        // Signal 'wordSubmitted'
+        QtMocHelpers::SignalData<void(const QString &)>(3, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::QString, 4 },
+        }}),
+        // Signal 'solutionRequested'
+        QtMocHelpers::SignalData<void()>(5, 2, QMC::AccessPublic, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -63,10 +76,22 @@ Q_CONSTINIT const QMetaObject PlayPage::staticMetaObject = { {
 void PlayPage::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     auto *_t = static_cast<PlayPage *>(_o);
-    (void)_t;
-    (void)_c;
-    (void)_id;
-    (void)_a;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        switch (_id) {
+        case 0: _t->backRequested(); break;
+        case 1: _t->wordSubmitted((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
+        case 2: _t->solutionRequested(); break;
+        default: ;
+        }
+    }
+    if (_c == QMetaObject::IndexOfMethod) {
+        if (QtMocHelpers::indexOfMethod<void (PlayPage::*)()>(_a, &PlayPage::backRequested, 0))
+            return;
+        if (QtMocHelpers::indexOfMethod<void (PlayPage::*)(const QString & )>(_a, &PlayPage::wordSubmitted, 1))
+            return;
+        if (QtMocHelpers::indexOfMethod<void (PlayPage::*)()>(_a, &PlayPage::solutionRequested, 2))
+            return;
+    }
 }
 
 const QMetaObject *PlayPage::metaObject() const
@@ -85,6 +110,36 @@ void *PlayPage::qt_metacast(const char *_clname)
 int PlayPage::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QWidget::qt_metacall(_c, _id, _a);
+    if (_id < 0)
+        return _id;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        if (_id < 3)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 3;
+    }
+    if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
+        if (_id < 3)
+            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
+        _id -= 3;
+    }
     return _id;
+}
+
+// SIGNAL 0
+void PlayPage::backRequested()
+{
+    QMetaObject::activate(this, &staticMetaObject, 0, nullptr);
+}
+
+// SIGNAL 1
+void PlayPage::wordSubmitted(const QString & _t1)
+{
+    QMetaObject::activate<void>(this, &staticMetaObject, 1, nullptr, _t1);
+}
+
+// SIGNAL 2
+void PlayPage::solutionRequested()
+{
+    QMetaObject::activate(this, &staticMetaObject, 2, nullptr);
 }
 QT_WARNING_POP

@@ -1,5 +1,7 @@
 D:/Visual\ Studio\ Projects/Project\ 2\ DSA/DSA-P2-Letter-Leap/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/letter_leap_autogen/UVLADIE3JM/moc_playpage.cpp: D:/Visual\ Studio\ Projects/Project\ 2\ DSA/DSA-P2-Letter-Leap/src/playpage.h \
   D:/Visual\ Studio\ Projects/Project\ 2\ DSA/DSA-P2-Letter-Leap/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/letter_leap_autogen/moc_predefs.h \
+  D:/Qt/6.12.0/mingw_64/include/QtCore/QString \
+  D:/Qt/6.12.0/mingw_64/include/QtCore/QVector \
   D:/Qt/6.12.0/mingw_64/include/QtCore/q17memory.h \
   D:/Qt/6.12.0/mingw_64/include/QtCore/q20bit.h \
   D:/Qt/6.12.0/mingw_64/include/QtCore/q20functional.h \
@@ -126,6 +128,7 @@ D:/Visual\ Studio\ Projects/Project\ 2\ DSA/DSA-P2-Letter-Leap/build/Desktop_Qt_
   D:/Qt/6.12.0/mingw_64/include/QtCore/qutf8stringview.h \
   D:/Qt/6.12.0/mingw_64/include/QtCore/qvariant.h \
   D:/Qt/6.12.0/mingw_64/include/QtCore/qvarlengtharray.h \
+  D:/Qt/6.12.0/mingw_64/include/QtCore/qvector.h \
   D:/Qt/6.12.0/mingw_64/include/QtCore/qversiontagging.h \
   D:/Qt/6.12.0/mingw_64/include/QtCore/qxptype_traits.h \
   D:/Qt/6.12.0/mingw_64/include/QtCore/qyieldcpu.h \
