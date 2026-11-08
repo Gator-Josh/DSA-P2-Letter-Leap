@@ -1,62 +1,21 @@
 # ninja log v7
-491	567	8158700260414134	CMakeFiles/letter_leap.dir/src/BK_Tree.cpp.obj	643db9deceb65889
-418	1839	8158729109149467	CMakeFiles/letter_leap.dir/src/main.cpp.obj	27c7cf388b34d993
-483	816	8158700260328245	CMakeFiles/letter_leap.dir/src/Trie.cpp.obj	10f19d3e46883034
-500	943	8158700260499312	CMakeFiles/letter_leap.dir/src/WordLoader.cpp.obj	958b6b8b5bc8169e
-2197	2473	8158791270516455	letter_leap.exe	ff894931a71e22ce
-16	412	8158791252011770	letter_leap_autogen/timestamp	edbdac42f17a1ae9
-16	412	8158791252011770	letter_leap_autogen/mocs_compilation.cpp	edbdac42f17a1ae9
-16	412	8158791252011770	D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/letter_leap_autogen/timestamp	edbdac42f17a1ae9
-16	412	8158791252011770	D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/letter_leap_autogen/mocs_compilation.cpp	edbdac42f17a1ae9
-412	1861	8158791252671402	CMakeFiles/letter_leap.dir/letter_leap_autogen/mocs_compilation.cpp.obj	7ff1871f05e113b4
-420	1979	8158791252752969	CMakeFiles/letter_leap.dir/src/mainwindow.cpp.obj	94cf60bd7aeab668
-423	1902	8158725380392923	CMakeFiles/letter_leap.dir/src/homepage.cpp.obj	a6ea827b90ab7ae5
-428	2197	8158791252833510	CMakeFiles/letter_leap.dir/src/playpage.cpp.obj	fda8ea97cbea6462
-16	173	8158793314833393	letter_leap_autogen/timestamp	edbdac42f17a1ae9
-16	173	8158793314833393	letter_leap_autogen/mocs_compilation.cpp	edbdac42f17a1ae9
-16	173	8158793314833393	D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/letter_leap_autogen/timestamp	edbdac42f17a1ae9
-16	173	8158793314833393	D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/letter_leap_autogen/mocs_compilation.cpp	edbdac42f17a1ae9
-174	1852	8158793316410268	CMakeFiles/letter_leap.dir/src/playpage.cpp.obj	fda8ea97cbea6462
-1852	2130	8158793333191016	letter_leap.exe	ff894931a71e22ce
-18	178	8158794965665428	letter_leap_autogen/timestamp	edbdac42f17a1ae9
-18	178	8158794965665428	letter_leap_autogen/mocs_compilation.cpp	edbdac42f17a1ae9
-18	178	8158794965665428	D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/letter_leap_autogen/timestamp	edbdac42f17a1ae9
-18	178	8158794965665428	D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/letter_leap_autogen/mocs_compilation.cpp	edbdac42f17a1ae9
-178	1915	8158794967271423	CMakeFiles/letter_leap.dir/src/playpage.cpp.obj	fda8ea97cbea6462
-1915	2192	8158794984646620	letter_leap.exe	ff894931a71e22ce
-17	197	8158795825837163	letter_leap_autogen/timestamp	edbdac42f17a1ae9
-17	197	8158795825837163	letter_leap_autogen/mocs_compilation.cpp	edbdac42f17a1ae9
-17	197	8158795825837163	D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/letter_leap_autogen/timestamp	edbdac42f17a1ae9
-17	197	8158795825837163	D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/letter_leap_autogen/mocs_compilation.cpp	edbdac42f17a1ae9
-197	1910	8158795827641111	CMakeFiles/letter_leap.dir/src/playpage.cpp.obj	fda8ea97cbea6462
-1910	2184	8158795844767780	letter_leap.exe	ff894931a71e22ce
-15	166	8158796495042624	letter_leap_autogen/timestamp	edbdac42f17a1ae9
-15	166	8158796495042624	letter_leap_autogen/mocs_compilation.cpp	edbdac42f17a1ae9
-15	166	8158796495042624	D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/letter_leap_autogen/timestamp	edbdac42f17a1ae9
-15	166	8158796495042624	D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/letter_leap_autogen/mocs_compilation.cpp	edbdac42f17a1ae9
-167	1803	8158796496559298	CMakeFiles/letter_leap.dir/src/playpage.cpp.obj	fda8ea97cbea6462
-1803	2076	8158796512920964	letter_leap.exe	ff894931a71e22ce
-16	177	8158797847527085	letter_leap_autogen/timestamp	edbdac42f17a1ae9
-16	177	8158797847527085	letter_leap_autogen/mocs_compilation.cpp	edbdac42f17a1ae9
-16	177	8158797847527085	D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/letter_leap_autogen/timestamp	edbdac42f17a1ae9
-16	177	8158797847527085	D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/letter_leap_autogen/mocs_compilation.cpp	edbdac42f17a1ae9
-177	1910	8158797849141582	CMakeFiles/letter_leap.dir/src/playpage.cpp.obj	fda8ea97cbea6462
-1910	2183	8158797866467674	letter_leap.exe	ff894931a71e22ce
-6	185	8158798467620873	letter_leap_autogen/timestamp	edbdac42f17a1ae9
-6	185	8158798467620873	letter_leap_autogen/mocs_compilation.cpp	edbdac42f17a1ae9
-6	185	8158798467620873	D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/letter_leap_autogen/timestamp	edbdac42f17a1ae9
-6	185	8158798467620873	D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/letter_leap_autogen/mocs_compilation.cpp	edbdac42f17a1ae9
-14	1627	8158798498689575	CMakeFiles/letter_leap.dir/src/playpage.cpp.obj	fda8ea97cbea6462
-1627	1899	8158798514823981	letter_leap.exe	ff894931a71e22ce
-15	192	8158799977379352	letter_leap_autogen/timestamp	edbdac42f17a1ae9
-15	192	8158799977379352	letter_leap_autogen/mocs_compilation.cpp	edbdac42f17a1ae9
-15	192	8158799977379352	D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/letter_leap_autogen/timestamp	edbdac42f17a1ae9
-15	192	8158799977379352	D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/letter_leap_autogen/mocs_compilation.cpp	edbdac42f17a1ae9
-192	1806	8158799979152313	CMakeFiles/letter_leap.dir/src/playpage.cpp.obj	fda8ea97cbea6462
-1806	2079	8158799995292631	letter_leap.exe	ff894931a71e22ce
-6	153	8158800383991935	letter_leap_autogen/timestamp	edbdac42f17a1ae9
-6	153	8158800383991935	letter_leap_autogen/mocs_compilation.cpp	edbdac42f17a1ae9
-6	153	8158800383991935	D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/letter_leap_autogen/timestamp	edbdac42f17a1ae9
-6	153	8158800383991935	D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/letter_leap_autogen/mocs_compilation.cpp	edbdac42f17a1ae9
-153	1774	8158800385462888	CMakeFiles/letter_leap.dir/src/playpage.cpp.obj	fda8ea97cbea6462
+413	1075	8158840804523827	CMakeFiles/letter_leap.dir/src/BK_Tree.cpp.obj	643db9deceb65889
+373	3492	8158840804121713	CMakeFiles/letter_leap.dir/src/main.cpp.obj	27c7cf388b34d993
+389	1514	8158840804297866	CMakeFiles/letter_leap.dir/src/Trie.cpp.obj	10f19d3e46883034
+425	1759	8158840804654185	CMakeFiles/letter_leap.dir/src/WordLoader.cpp.obj	958b6b8b5bc8169e
 1774	2047	8158800401684635	letter_leap.exe	ff894931a71e22ce
+11	357	8158840802905452	letter_leap_autogen/timestamp	edbdac42f17a1ae9
+11	357	8158840802905452	letter_leap_autogen/mocs_compilation.cpp	edbdac42f17a1ae9
+11	357	8158840802905452	D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/letter_leap_autogen/timestamp	edbdac42f17a1ae9
+11	357	8158840802905452	D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/letter_leap_autogen/mocs_compilation.cpp	edbdac42f17a1ae9
+357	878	8158840803970819	CMakeFiles/letter_leap.dir/letter_leap_autogen/mocs_compilation.cpp.obj	7ff1871f05e113b4
+449	4132	8158840804885672	CMakeFiles/letter_leap.dir/src/mainwindow.cpp.obj	94cf60bd7aeab668
+514	3868	8158840805543364	CMakeFiles/letter_leap.dir/src/homepage.cpp.obj	a6ea827b90ab7ae5
+544	4334	8158840805844986	CMakeFiles/letter_leap.dir/src/playpage.cpp.obj	fda8ea97cbea6462
+7	682	8158841055613525	build.ninja	9fb23b15119b0a71
+13	465	8158841060206939	letter_leap_autogen/timestamp	edbdac42f17a1ae9
+13	465	8158841060206939	letter_leap_autogen/mocs_compilation.cpp	edbdac42f17a1ae9
+13	465	8158841060206939	D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/letter_leap_autogen/timestamp	edbdac42f17a1ae9
+13	465	8158841060206939	D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/letter_leap_autogen/mocs_compilation.cpp	edbdac42f17a1ae9
+466	2453	8158841060898706	CMakeFiles/letter_leap.dir/letter_leap_autogen/mocs_compilation.cpp.obj	7ff1871f05e113b4
+2453	3216	8158841080775423	letter_leap.exe	ff894931a71e22ce

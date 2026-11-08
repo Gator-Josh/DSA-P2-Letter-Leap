@@ -17,7 +17,6 @@ add_executable(letter_leap
     src/Trie.cpp
     src/Trie.h
     src/BK_Tree.cpp
-    src/BK_Tree.h
     src/WordLoader.cpp
     src/WordLoader.h
     src/mainwindow.h src/mainwindow.cpp src/mainwindow.ui

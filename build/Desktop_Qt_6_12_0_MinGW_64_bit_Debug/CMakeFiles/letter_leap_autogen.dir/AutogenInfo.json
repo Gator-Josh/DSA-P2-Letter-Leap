@@ -345,12 +345,6 @@
 	"HEADERS" : 
 	[
 		[
-			"D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/src/BK_Tree.h",
-			"MU",
-			"UVLADIE3JM/moc_BK_Tree.cpp",
-			null
-		],
-		[
 			"D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/src/Trie.h",
 			"MU",
 			"UVLADIE3JM/moc_Trie.cpp",
