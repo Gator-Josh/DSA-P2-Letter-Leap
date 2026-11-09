@@ -35,7 +35,7 @@ PlayPage::PlayPage(QWidget *parent)
     m_grid = new QGridLayout(ui->scrollAreaWidgetContents);
     m_grid->setSpacing(8);
     m_grid->setAlignment(Qt::AlignHCenter | Qt::AlignTop);
-    // Tiles are created later, in startGame, once the letter count is known
+    // Tiles are created in startGame, once the letter count is known
 }
 
 PlayPage::~PlayPage()
@@ -45,7 +45,7 @@ PlayPage::~PlayPage()
 
 bool PlayPage::startGame(SearchMode mode, int letters)
 {
-    // Pick the engine for this game
+    // Pick the data structure for this game
     GameLogic *game = (mode == SearchMode::Trie)
                           ? static_cast<GameLogic *>(&m_trie)
                           : static_cast<GameLogic *>(&m_bk);
@@ -60,17 +60,15 @@ bool PlayPage::startGame(SearchMode mode, int letters)
     m_won = false;
     m_solutionShown = false;
 
-    // The ladder needs at least `complexity` moves; leave some spare rows.
-    // +1 for the pre-filled first word row.
-    m_rowCount = m_game->getComplexity() + 5 + 1;
+    // Fake having infinite rows by just making 2000 of them... :3
+    m_rowCount = 2000;
 
-    ui->playLabel->setText(mode == SearchMode::Trie ? "Mode: Trie"
-                                                    : "Mode: BK-Tree");
+    ui->playLabel->setText(mode == SearchMode::Trie ? "Mode: Trie" : "Mode: BK-Tree");
     ui->statusLabel->clear();
 
     buildGrid();
 
-    // Row 0 is the starting word, already locked in
+    // Firs row is the starting word
     const QString first = QString::fromStdString(m_game->getFirstWord()).toUpper();
     for (int c = 0; c < m_tileCount; ++c)
         m_tiles[0][c]->setText(QString(first[c]));
@@ -96,6 +94,7 @@ void PlayPage::buildGrid()
     m_tiles.clear();
 
     // Shrink tiles for long words so the grid still fits the width
+    // UI IS SUCH A PAIN
     const int size = (m_tileCount > 9) ? 44 : 56;
 
     m_tiles.resize(m_rowCount);
@@ -147,7 +146,7 @@ void PlayPage::keyPressEvent(QKeyEvent *event)
                     scrollToActive = true;
                 }
             } else {
-                // Invalid: keep the row active so the player can fix it
+                // Keeps the row active so the player can keep guessing
                 ui->statusLabel->setText(messageFor(result));
             }
         }
@@ -168,7 +167,7 @@ void PlayPage::keyPressEvent(QKeyEvent *event)
     refreshTiles();
 
     if (scrollToActive) {
-        // Wait for the layout to update, then bring the new active row into view
+        // Waits for the layout to update, then brings the new active row into view
         QTimer::singleShot(0, this, [this]() {
             if (m_currentRow < m_tiles.size())
                 ui->tileScroll->ensureWidgetVisible(m_tiles[m_currentRow][0]);
@@ -222,7 +221,7 @@ void PlayPage::showSolution()
     if (solution.empty() || static_cast<int>(solution.size()) > static_cast<int>(m_tiles.size()))
         return;
 
-    // Write each word of the path into its own row, first word on top
+    // Write each word of the path into its own row
     int row = 0;
     for (const std::string &w : solution) {
         const QString word = QString::fromStdString(w).toUpper();
@@ -236,7 +235,12 @@ void PlayPage::showSolution()
     m_currentRow = row;          // every solution row counts as "past"
     refreshTiles();
 
-    // Color the solution rows green so they stand out from normal play
+    // Color the solution rows green
+    // I like green
+    // its one of my two favorite colors
+    // my other favorite color is orange btw
+    // my favorite types of these colors are pastel variants
+    // i really like pastel orange i think its pretty <3
     for (int r = 0; r < row; ++r)
         for (int c = 0; c < m_tileCount; ++c)
             styleTile(m_tiles[r][c], "#2e7d32", "#66bb6a");
@@ -254,15 +258,15 @@ void PlayPage::resetGame()
     m_won = false;
     m_solutionShown = false;
 
-    // Clear every tile's text (solution or guesses may have filled them)
+    // Clear every tile's text
     for (auto &row : m_tiles)
         for (QLabel *t : row)
             t->setText(QString());
 
-    // Rewind the engine to the first word of the SAME puzzle
+    // Rewind the game to the first word of the SAME puzzle
     m_game->resetProgress();
 
-    // Row 0 is the starting word again
+    // First word is the same starting word again
     const QString first = QString::fromStdString(m_game->getFirstWord()).toUpper();
     for (int c = 0; c < m_tileCount; ++c)
         m_tiles[0][c]->setText(QString(first[c]));
