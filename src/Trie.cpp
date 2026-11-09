@@ -37,28 +37,28 @@ public:
     int complexity = 5;
     int maxAttempts = 200;
 
-	Trie() {
+    Trie() {
         static bool seeded = false;
         if (!seeded) {
             srand(static_cast<unsigned>(time(nullptr)));
             seeded = true;
         }
-		root = new TrieNode();
+        root = new TrieNode();
     }
 
-	~Trie() {
-		destroy(root);
-	}
+    ~Trie() {
+        destroy(root);
+    }
 
-	Trie(const Trie&) = delete;
+    Trie(const Trie&) = delete;
     Trie& operator=(const Trie&) = delete;
 
 private:
-	TrieNode* root;
-	list<string> solution;
-	unordered_set<string> usedWords;
+    TrieNode* root;
+    list<string> solution;
+    unordered_set<string> usedWords;
 
-	 void destroy(TrieNode* node) {
+    void destroy(TrieNode* node) {
         if (node == nullptr) return;
         for (TrieNode* child : node->children) {
             destroy(child);
@@ -66,18 +66,18 @@ private:
         delete node;
     }
 
-	void clear() {
+    void clear() {
         destroy(root);
-		root = new TrieNode();
-	}
+        root = new TrieNode();
+    }
 
-	static size_t randomIndex(size_t n) {
+    static size_t randomIndex(size_t n) {
         size_t r = (static_cast<size_t>(rand()) << 15) | static_cast<size_t>(rand());
         return r % n;
     }
 
-	static bool cleanWord(string &w) {
-		size_t s = w.find_first_not_of(" \t\r\n");
+    static bool cleanWord(string &w) {
+        size_t s = w.find_first_not_of(" \t\r\n");
         if (s == string::npos) return false;
         size_t e = w.find_last_not_of(" \t\r\n");
         w = w.substr(s, e - s + 1);
@@ -86,34 +86,34 @@ private:
             if (c < 'a' || c > 'z') return false;
         }
         return true;
-	}
+    }
 
-	vector<string> loadWords(int numLetters) {
+    vector<string> loadWords(int numLetters) {
         vector<string> words;
         clear();
 
-        ifstream in("letter" + to_string(numLetters) + ".txt");
+        ifstream in("data/letter" + to_string(numLetters) + ".txt");
         if (!in) {
-            cerr << "Could not open letter" << numLetters << ".txt\n";
+            cerr << "Could not open data/letter" << numLetters << ".txt\n";
             return words;
         }
         string w;
         while (getline(in, w)) {
             if (cleanWord(w) && static_cast<int>(w.size()) == numLetters && !search(w)) {
-				insert(w);
+                insert(w);
                 words.push_back(w);
             }
         }
         return words;
     }
 
-	bool buildSolution(const string &root) {
+    bool buildSolution(const string &rootWord) {
         solution.clear();
         unordered_set<string> inSolution;
 
-        solution.push_back(root);
-        inSolution.insert(root);
-        string current = root;
+        solution.push_back(rootWord);
+        inSolution.insert(rootWord);
+        string current = rootWord;
 
         for (int step = 0; step < complexity; ++step) {
             vector<string> candidates;
@@ -130,20 +130,20 @@ private:
         return true;
     }
 
-	public:
-		void insert(const string& target) {
-			TrieNode* curr = this->root;
+public:
+    void insert(const string& target) {
+        TrieNode* curr = this->root;
 
-        	for (char c : target) {
-            	if (c < 'a' || c > 'z') return;  // ignore words with non a-z characters
-            	int index = c - 'a';
-            	if (curr->children[index] == nullptr) {
-                	curr->children[index] = new TrieNode();
-            	}
-            	curr = curr->children[index];
-        	}
-        	curr->isWord = true;
-		}
+        for (char c : target) {
+            if (c < 'a' || c > 'z') return;  // ignore words with non a-z characters
+            int index = c - 'a';
+            if (curr->children[index] == nullptr) {
+                curr->children[index] = new TrieNode();
+            }
+            curr = curr->children[index];
+        }
+        curr->isWord = true;
+    }
 
     bool search(const string& target) const {
         TrieNode* current = this->root;
@@ -190,22 +190,22 @@ private:
             return false;
         }
 
-		for (int attempt = 0; attempt < maxAttempts; ++attempt) {
-			// Step 1
-			lastWord = words[randomIndex(words.size())];
+        for (int attempt = 0; attempt < maxAttempts; ++attempt) {
+            // Step 1
+            lastWord = words[randomIndex(words.size())];
 
-			// Steps 2-4
-			if (buildSolution(lastWord)) {
-				firstWord = solution.front();
+            // Steps 2-4
+            if (buildSolution(lastWord)) {
+                firstWord = solution.front();
 
-				// Step 5:
-				prevWord = firstWord;
-				usedWords.clear();
-				usedWords.insert(firstWord);
-				return true;
-			}
-		}
-		return false;
+                // Step 5:
+                prevWord = firstWord;
+                usedWords.clear();
+                usedWords.insert(firstWord);
+                return true;
+            }
+        }
+        return false;
     }
 
     string getLastWord() override {
@@ -220,6 +220,17 @@ private:
         return solution;
     }
 
+    int getComplexity() const override {
+        return complexity;
+    }
+
+    // Rewinds player progress to the start of the SAME puzzle
+    void resetProgress() override {
+        prevWord = firstWord;
+        usedWords.clear();
+        usedWords.insert(firstWord);
+    }
+
     string insertWord(string word) override {
         /* Logic:
          *
@@ -229,7 +240,7 @@ private:
          *
          * Step 1: Check if word is of valid length, is not the same as any previously used word, and is not the same as firstWord.
          * Step 2: Check if word exists in letter<numLetter>.txt.
-         * Step 3: Check if word is 1 letter swap away from prevWord using BK tree.
+         * Step 3: Check if word is 1 letter swap away from prevWord using the trie.
          * Step 4: The word meets all validation requirements so update prevWord and return "valid".
         */
         // Step 1
@@ -255,7 +266,5 @@ private:
         return "valid";
     }
 };
-
-
 
 #endif //DSA_P2_LETTER_LEAP_TRIE_CPP

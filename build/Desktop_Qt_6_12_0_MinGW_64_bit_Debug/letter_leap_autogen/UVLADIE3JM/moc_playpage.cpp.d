@@ -406,4 +406,6 @@ D:/Visual\ Studio\ Projects/Project\ 2\ DSA/DSA-P2-Letter-Leap/build/Desktop_Qt_
   D:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
   D:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
   D:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wctype.h \
-  D:/Visual\ Studio\ Projects/Project\ 2\ DSA/DSA-P2-Letter-Leap/src/BK_Tree.cpp
+  D:/Visual\ Studio\ Projects/Project\ 2\ DSA/DSA-P2-Letter-Leap/src/BK_Tree.cpp \
+  D:/Visual\ Studio\ Projects/Project\ 2\ DSA/DSA-P2-Letter-Leap/src/GameLogic.cpp \
+  D:/Visual\ Studio\ Projects/Project\ 2\ DSA/DSA-P2-Letter-Leap/src/Trie.cpp

@@ -11,9 +11,10 @@
 #include <string>
 #include <unordered_set>
 #include <vector>
+#include "GameLogic.cpp"
 using namespace std;
 
-class BK_Tree {
+class BK_Tree : public GameLogic {
 public:
     string lastWord;
     string firstWord;
@@ -118,7 +119,7 @@ private:
 
         ifstream in("data/letter" + to_string(numLetters) + ".txt");
         if (!in) {
-            cerr << "Could not open letter" << numLetters << ".txt\n";
+            cerr << "Could not open data/letter" << numLetters << ".txt\n";
             return words;
         }
         string w;
@@ -163,7 +164,7 @@ private:
         return true;
     }
 public:
-    bool generateLastWord(int numLetters) {
+    bool generateLastWord(int numLetters) override {
         /* Logic:
         *  Step 0: Directional linked list "solution" hold each word in the following sequence. This way, solution can be returned later to display a valid solution in game.
         *  Step 1: The last word is set as the BK tree's root. Randomly select a word from "letter<numLetters>.txt" as the last word and add it to <solution>.
@@ -199,26 +200,30 @@ public:
         return false;
     }
 
-    string getLastWord() {
+    string getLastWord() override {
         return lastWord;
     }
 
-    string getFirstWord() {
+    string getFirstWord() override {
         return firstWord;
     }
 
-    const list<string> &getSolution() const {
+    const list<string> &getSolution() const override {
         return solution;
     }
 
+    int getComplexity() const override {
+        return complexity;
+    }
 
-    void resetProgress() {
+    // Rewinds player progress to the start of the SAME puzzle
+    void resetProgress() override {
         prevWord = firstWord;
         usedWords.clear();
         usedWords.insert(firstWord);
     }
 
-    string insertWord(string word) {
+    string insertWord(string word) override {
         /* Logic:
          *
          * Insert word is called by the front-end GUI and returns a string to indicate why the word is invalid or that it is valid.

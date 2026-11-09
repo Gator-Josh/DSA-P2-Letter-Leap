@@ -1,5 +1,3 @@
-#include "BK_Tree.cpp"
-
 #include "playpage.h"
 #include "ui_playpage.h"
 
@@ -7,6 +5,7 @@
 #include <QLabel>
 #include <QGridLayout>
 #include <QScrollBar>
+#include <QTimer>
 
 static QString messageFor(const std::string &result)
 {
@@ -46,40 +45,38 @@ PlayPage::~PlayPage()
 
 bool PlayPage::startGame(SearchMode mode, int letters)
 {
+    // Pick the engine for this game
+    GameLogic *game = (mode == SearchMode::Trie)
+                          ? static_cast<GameLogic *>(&m_trie)
+                          : static_cast<GameLogic *>(&m_bk);
+
+    if (!game->generateLastWord(letters))
+        return false;   // word list missing or no valid chain found
+
+    m_game = game;
     m_mode = mode;
     m_tileCount = letters;
     m_typed.clear();
     m_won = false;
     m_solutionShown = false;
 
-    if (mode == SearchMode::BkTree) {
-        if (!m_bk.generateLastWord(letters)) {
-            return false;   // word list missing or no valid chain found
-        }
-        // The ladder needs at least `complexity` moves; leave some spare rows.
-        // +1 for the pre-filled first word row.
-        m_rowCount = m_bk.complexity + 5 + 1;
-    } else {
-        m_rowCount = 8;     // placeholder until the Trie mode is hooked up
-    }
+    // The ladder needs at least `complexity` moves; leave some spare rows.
+    // +1 for the pre-filled first word row.
+    m_rowCount = m_game->getComplexity() + 5 + 1;
 
     ui->playLabel->setText(mode == SearchMode::Trie ? "Mode: Trie"
                                                     : "Mode: BK-Tree");
+    ui->statusLabel->clear();
 
     buildGrid();
 
-    if (mode == SearchMode::BkTree) {
-        // Row 0 is the starting word, already locked in
-        const QString first = QString::fromStdString(m_bk.getFirstWord()).toUpper();
-        for (int c = 0; c < m_tileCount; ++c)
-            m_tiles[0][c]->setText(QString(first[c]));
-        m_currentRow = 1;
-        ui->targetLabel->setText("Target: " +
-                                 QString::fromStdString(m_bk.getLastWord()).toUpper());
-    } else {
-        m_currentRow = 0;
-        ui->statusLabel->clear();
-    }
+    // Row 0 is the starting word, already locked in
+    const QString first = QString::fromStdString(m_game->getFirstWord()).toUpper();
+    for (int c = 0; c < m_tileCount; ++c)
+        m_tiles[0][c]->setText(QString(first[c]));
+    m_currentRow = 1;
+    ui->targetLabel->setText("Target: " +
+                             QString::fromStdString(m_game->getLastWord()).toUpper());
 
     refreshTiles();
     ui->tileScroll->verticalScrollBar()->setValue(0);
@@ -115,7 +112,8 @@ void PlayPage::buildGrid()
 
 void PlayPage::keyPressEvent(QKeyEvent *event)
 {
-    const bool boardFull = (m_currentRow >= m_rowCount) || m_won || m_solutionShown;
+    const bool boardFull = !m_game || (m_currentRow >= m_rowCount) || m_won || m_solutionShown;
+    bool scrollToActive = false;
 
     switch (event->key()) {
     case Qt::Key_Escape:
@@ -131,25 +129,22 @@ void PlayPage::keyPressEvent(QKeyEvent *event)
     case Qt::Key_Enter:
         if (!boardFull && m_typed.size() == m_tileCount) {
             const std::string word = m_typed.toLower().toStdString();
-
-            // Trie mode will get its own validation later
-            const std::string result = (m_mode == SearchMode::BkTree)
-                                           ? m_bk.insertWord(word)
-                                           : std::string("valid");
+            const std::string result = m_game->insertWord(word);
 
             if (result == "valid") {
                 emit wordSubmitted(m_typed);
                 m_typed.clear();
                 ++m_currentRow;
-                ui->targetLabel->setText("Target: " +
-                                         QString::fromStdString(m_bk.getLastWord()).toUpper());
+                ui->statusLabel->clear();
 
-                if (m_mode == SearchMode::BkTree && word == m_bk.getLastWord()) {
+                if (word == m_game->getLastWord()) {
                     m_won = true;
                     ui->statusLabel->setText("You win!");
-                }
-                else {
-                    ui->tileScroll->ensureWidgetVisible(m_tiles[m_currentRow][0]);
+                } else if (m_currentRow >= m_rowCount) {
+                    //Only here as a backup since the way the "infinite" guesses works is that there's 2000 rows
+                    ui->statusLabel->setText("Out of rows!");
+                } else {
+                    scrollToActive = true;
                 }
             } else {
                 // Invalid: keep the row active so the player can fix it
@@ -171,6 +166,14 @@ void PlayPage::keyPressEvent(QKeyEvent *event)
     }
 
     refreshTiles();
+
+    if (scrollToActive) {
+        // Wait for the layout to update, then bring the new active row into view
+        QTimer::singleShot(0, this, [this]() {
+            if (m_currentRow < m_tiles.size())
+                ui->tileScroll->ensureWidgetVisible(m_tiles[m_currentRow][0]);
+        });
+    }
 }
 
 void PlayPage::styleTile(QLabel *tile, const QString &bg, const QString &border)
@@ -195,7 +198,7 @@ void PlayPage::refreshTiles()
             if (r < m_currentRow) {
                 tile->setVisible(true);
                 styleTile(tile, "#4a4a4a", "#4a4a4a");           // past rows
-        } else if (r == m_currentRow && !m_won && !m_solutionShown) {
+            } else if (r == m_currentRow && !m_won && !m_solutionShown) {
                 tile->setVisible(true);
                 const bool filled = c < m_typed.size();          // active row
                 tile->setText(filled ? QString(m_typed[c]) : QString());
@@ -212,13 +215,11 @@ void PlayPage::refreshTiles()
 
 void PlayPage::showSolution()
 {
-    if (m_mode != SearchMode::BkTree) {
-        ui->statusLabel->setText("No solution available in this mode");
+    if (!m_game)
         return;
-    }
 
-    const auto &solution = m_bk.getSolution();
-    if (solution.empty() || static_cast<int>(solution.size()) > m_tiles.size())
+    const auto &solution = m_game->getSolution();
+    if (solution.empty() || static_cast<int>(solution.size()) > static_cast<int>(m_tiles.size()))
         return;
 
     // Write each word of the path into its own row, first word on top
@@ -246,7 +247,7 @@ void PlayPage::showSolution()
 
 void PlayPage::resetGame()
 {
-    if (m_tiles.isEmpty())
+    if (!m_game || m_tiles.isEmpty())
         return;
 
     m_typed.clear();
@@ -258,17 +259,14 @@ void PlayPage::resetGame()
         for (QLabel *t : row)
             t->setText(QString());
 
-    if (m_mode == SearchMode::BkTree) {
-        m_bk.resetProgress();
+    // Rewind the engine to the first word of the SAME puzzle
+    m_game->resetProgress();
 
-        // Row 0 is the starting word again
-        const QString first = QString::fromStdString(m_bk.getFirstWord()).toUpper();
-        for (int c = 0; c < m_tileCount; ++c)
-            m_tiles[0][c]->setText(QString(first[c]));
-        m_currentRow = 1;
-    } else {
-        m_currentRow = 0;
-    }
+    // Row 0 is the starting word again
+    const QString first = QString::fromStdString(m_game->getFirstWord()).toUpper();
+    for (int c = 0; c < m_tileCount; ++c)
+        m_tiles[0][c]->setText(QString(first[c]));
+    m_currentRow = 1;
 
     ui->statusLabel->clear();
     refreshTiles();

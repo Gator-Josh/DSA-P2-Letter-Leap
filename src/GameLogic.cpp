@@ -2,12 +2,12 @@
 // Created by Lucia Novo on 11/8/26.
 //
 
+#ifndef DSA_P2_LETTER_LEAP_GAMELOGIC_CPP
+#define DSA_P2_LETTER_LEAP_GAMELOGIC_CPP
+
 #include <list>
 #include <string>
 #include <vector>
-
-#ifndef DSA_P2_LETTER_LEAP_GAMELOGIC_CPP
-#define DSA_P2_LETTER_LEAP_GAMELOGIC_CPP
 using namespace std;
 
 class GameLogic {
@@ -18,6 +18,8 @@ class GameLogic {
         virtual string getFirstWord() = 0;
         virtual const list<string> &getSolution() const = 0;
         virtual string insertWord(string word) = 0;
+        virtual void resetProgress() = 0;
+        virtual int getComplexity() const = 0;
 };
 
 #endif //DSA_P2_LETTER_LEAP_GAMELOGIC_CPP
