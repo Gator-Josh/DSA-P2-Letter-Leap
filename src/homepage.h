@@ -14,8 +14,8 @@ public:
     ~HomePage();
 
 signals:
-    void playTrieRequested();
-    void playBkTreeRequested();
+    void playTrieRequested(int letters);
+    void playBkTreeRequested(int letters);
     void quitRequested();
 
 private:

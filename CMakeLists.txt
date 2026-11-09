@@ -12,6 +12,8 @@ find_package(Qt6 REQUIRED COMPONENTS Widgets)
 
 include_directories(src)
 
+
+
 add_executable(letter_leap
     src/main.cpp
     src/Trie.cpp
@@ -26,3 +28,9 @@ add_executable(letter_leap
 )
 
 target_link_libraries(letter_leap PRIVATE Qt6::Widgets)
+
+add_custom_command(TARGET letter_leap POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+            ${CMAKE_SOURCE_DIR}/data
+            $<TARGET_FILE_DIR:letter_leap>/data
+)

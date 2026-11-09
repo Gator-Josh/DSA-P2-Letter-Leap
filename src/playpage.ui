@@ -22,6 +22,20 @@
     </widget>
    </item>
    <item>
+    <widget class="QLabel" name="targetLabel">
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="statusLabel">
+     <property name="text">
+      <string>Errors/Feedback will be shown here!</string>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="QScrollArea" name="tileScroll">
      <property name="frameShape">
       <enum>QFrame::Shape::NoFrame</enum>
@@ -41,7 +55,7 @@
         <x>0</x>
         <y>0</y>
         <width>764</width>
-        <height>374</height>
+        <height>330</height>
        </rect>
       </property>
      </widget>
@@ -66,6 +80,26 @@
       <widget class="QPushButton" name="backButton">
        <property name="text">
         <string>Back to Menu</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_4">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="resetButton">
+       <property name="text">
+        <string>Reset</string>
        </property>
       </widget>
      </item>

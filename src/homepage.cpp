@@ -6,8 +6,12 @@ HomePage::HomePage(QWidget *parent)
 {
     ui->setupUi(this);
 
-    connect(ui->trieButton,   &QPushButton::clicked, this, &HomePage::playTrieRequested);
-    connect(ui->bkButton, &QPushButton::clicked, this, &HomePage::playBkTreeRequested);
+    connect(ui->trieButton, &QPushButton::clicked, this, [this]() {
+        emit playTrieRequested(ui->lengthSpin->value());
+    });
+    connect(ui->bkButton, &QPushButton::clicked, this, [this]() {
+        emit playBkTreeRequested(ui->lengthSpin->value());
+    });
     connect(ui->quitButton,   &QPushButton::clicked, this, &HomePage::quitRequested);
 }
 

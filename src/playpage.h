@@ -4,6 +4,7 @@
 #include <QWidget>
 #include <QString>
 #include <QVector>
+#include "BK_Tree.cpp"
 
 class QKeyEvent;
 class QLabel;
@@ -21,7 +22,7 @@ public:
     explicit PlayPage(QWidget *parent = nullptr);
     ~PlayPage();
 
-    void setMode(SearchMode mode);
+    bool startGame(SearchMode mode, int letters);
 
 signals:
     void backRequested();
@@ -32,19 +33,24 @@ protected:
     void keyPressEvent(QKeyEvent *event) override;
 
 private:
+    void buildGrid();
     void refreshTiles();
     void styleTile(QLabel *tile, const QString &bg, const QString &border);
+    void showSolution();
+    bool m_solutionShown = false;
+    void resetGame();
 
     Ui::PlayPage *ui;
     QGridLayout *m_grid = nullptr;
     SearchMode m_mode = SearchMode::Trie;
+    BK_Tree m_bk;
 
     QString m_typed;
     int m_currentRow = 0;
+    int m_tileCount = 5;     // set by startGame
+    int m_rowCount = 8;      // set by startGame
+    bool m_won = false;
     QVector<QVector<QLabel *>> m_tiles;
-
-    static constexpr int kTileCount = 4;
-    static constexpr int kRowCount  = 2000; // This is the secret... its not actually infinite attempts... :3
 };
 
 #endif

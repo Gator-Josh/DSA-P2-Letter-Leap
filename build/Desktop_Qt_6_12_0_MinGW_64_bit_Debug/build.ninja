@@ -125,7 +125,7 @@ build letter_leap.exe: CXX_EXECUTABLE_LINKER__letter_leap_Debug CMakeFiles/lette
   FLAGS = -g
   LINK_LIBRARIES = D:/Qt/6.12.0/mingw_64/lib/libQt6Widgets.a  D:/Qt/6.12.0/mingw_64/lib/libQt6Gui.a  D:/Qt/6.12.0/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -ld3d11  -ldxgi  -ldxguid  -ld3d12  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\letter_leap.dir
-  POST_BUILD = cd .
+  POST_BUILD = C:\WINDOWS\system32\cmd.exe /C "cd /D "D:\Visual Studio Projects\Project 2 DSA\DSA-P2-Letter-Leap\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug" && D:\Qt\Tools\CMake_64\bin\cmake.exe -E copy_directory "D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/data" "D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/data""
   PRE_LINK = cd .
   TARGET_FILE = letter_leap.exe
   TARGET_IMPLIB = libletter_leap.dll.a

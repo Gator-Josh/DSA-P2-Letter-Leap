@@ -41,17 +41,22 @@ template <> constexpr inline auto HomePage::qt_create_metaobjectdata<qt_meta_tag
         "HomePage",
         "playTrieRequested",
         "",
+        "letters",
         "playBkTreeRequested",
         "quitRequested"
     };
 
     QtMocHelpers::UintData qt_methods {
         // Signal 'playTrieRequested'
-        QtMocHelpers::SignalData<void()>(1, 2, QMC::AccessPublic, QMetaType::Void),
+        QtMocHelpers::SignalData<void(int)>(1, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::Int, 3 },
+        }}),
         // Signal 'playBkTreeRequested'
-        QtMocHelpers::SignalData<void()>(3, 2, QMC::AccessPublic, QMetaType::Void),
+        QtMocHelpers::SignalData<void(int)>(4, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::Int, 3 },
+        }}),
         // Signal 'quitRequested'
-        QtMocHelpers::SignalData<void()>(4, 2, QMC::AccessPublic, QMetaType::Void),
+        QtMocHelpers::SignalData<void()>(5, 2, QMC::AccessPublic, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -75,16 +80,16 @@ void HomePage::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
     auto *_t = static_cast<HomePage *>(_o);
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: _t->playTrieRequested(); break;
-        case 1: _t->playBkTreeRequested(); break;
+        case 0: _t->playTrieRequested((*reinterpret_cast<std::add_pointer_t<int>>(_a[1]))); break;
+        case 1: _t->playBkTreeRequested((*reinterpret_cast<std::add_pointer_t<int>>(_a[1]))); break;
         case 2: _t->quitRequested(); break;
         default: ;
         }
     }
     if (_c == QMetaObject::IndexOfMethod) {
-        if (QtMocHelpers::indexOfMethod<void (HomePage::*)()>(_a, &HomePage::playTrieRequested, 0))
+        if (QtMocHelpers::indexOfMethod<void (HomePage::*)(int )>(_a, &HomePage::playTrieRequested, 0))
             return;
-        if (QtMocHelpers::indexOfMethod<void (HomePage::*)()>(_a, &HomePage::playBkTreeRequested, 1))
+        if (QtMocHelpers::indexOfMethod<void (HomePage::*)(int )>(_a, &HomePage::playBkTreeRequested, 1))
             return;
         if (QtMocHelpers::indexOfMethod<void (HomePage::*)()>(_a, &HomePage::quitRequested, 2))
             return;
@@ -123,15 +128,15 @@ int HomePage::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void HomePage::playTrieRequested()
+void HomePage::playTrieRequested(int _t1)
 {
-    QMetaObject::activate(this, &staticMetaObject, 0, nullptr);
+    QMetaObject::activate<void>(this, &staticMetaObject, 0, nullptr, _t1);
 }
 
 // SIGNAL 1
-void HomePage::playBkTreeRequested()
+void HomePage::playBkTreeRequested(int _t1)
 {
-    QMetaObject::activate(this, &staticMetaObject, 1, nullptr);
+    QMetaObject::activate<void>(this, &staticMetaObject, 1, nullptr, _t1);
 }
 
 // SIGNAL 2

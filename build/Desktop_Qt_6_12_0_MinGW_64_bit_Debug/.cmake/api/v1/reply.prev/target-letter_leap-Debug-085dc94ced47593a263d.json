@@ -47,13 +47,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 15,
+				"line" : 17,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 28,
+				"line" : 30,
 				"parent" : 0
 			},
 			{
@@ -201,6 +201,12 @@
 				"file" : 0,
 				"line" : 13,
 				"parent" : 0
+			},
+			{
+				"command" : 9,
+				"file" : 0,
+				"line" : 15,
+				"parent" : 0
 			}
 		]
 	},
@@ -269,6 +275,10 @@
 				{
 					"backtrace" : 29,
 					"path" : "D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/src"
+				},
+				{
+					"backtrace" : 30,
+					"path" : "D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/data"
 				},
 				{
 					"backtrace" : 2,

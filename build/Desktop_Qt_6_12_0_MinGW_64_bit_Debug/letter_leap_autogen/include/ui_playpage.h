@@ -26,11 +26,15 @@ class Ui_PlayPage
 public:
     QVBoxLayout *verticalLayout;
     QLabel *playLabel;
+    QLabel *targetLabel;
+    QLabel *statusLabel;
     QScrollArea *tileScroll;
     QWidget *scrollAreaWidgetContents;
     QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer_2;
     QPushButton *backButton;
+    QSpacerItem *horizontalSpacer_4;
+    QPushButton *resetButton;
     QSpacerItem *horizontalSpacer;
     QPushButton *solutionButton;
     QSpacerItem *horizontalSpacer_3;
@@ -47,6 +51,16 @@ public:
 
         verticalLayout->addWidget(playLabel);
 
+        targetLabel = new QLabel(PlayPage);
+        targetLabel->setObjectName("targetLabel");
+
+        verticalLayout->addWidget(targetLabel);
+
+        statusLabel = new QLabel(PlayPage);
+        statusLabel->setObjectName("statusLabel");
+
+        verticalLayout->addWidget(statusLabel);
+
         tileScroll = new QScrollArea(PlayPage);
         tileScroll->setObjectName("tileScroll");
         tileScroll->setFrameShape(QFrame::Shape::NoFrame);
@@ -55,7 +69,7 @@ public:
         tileScroll->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName("scrollAreaWidgetContents");
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 764, 374));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 764, 330));
         tileScroll->setWidget(scrollAreaWidgetContents);
 
         verticalLayout->addWidget(tileScroll);
@@ -70,6 +84,15 @@ public:
         backButton->setObjectName("backButton");
 
         horizontalLayout->addWidget(backButton);
+
+        horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer_4);
+
+        resetButton = new QPushButton(PlayPage);
+        resetButton->setObjectName("resetButton");
+
+        horizontalLayout->addWidget(resetButton);
 
         horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
 
@@ -97,7 +120,10 @@ public:
     {
         PlayPage->setWindowTitle(QCoreApplication::translate("PlayPage", "Form", nullptr));
         playLabel->setText(QCoreApplication::translate("PlayPage", "TextLabel", nullptr));
+        targetLabel->setText(QCoreApplication::translate("PlayPage", "TextLabel", nullptr));
+        statusLabel->setText(QCoreApplication::translate("PlayPage", "Errors/Feedback will be shown here!", nullptr));
         backButton->setText(QCoreApplication::translate("PlayPage", "Back to Menu", nullptr));
+        resetButton->setText(QCoreApplication::translate("PlayPage", "Reset", nullptr));
         solutionButton->setText(QCoreApplication::translate("PlayPage", "Show Solution", nullptr));
     } // retranslateUi
 

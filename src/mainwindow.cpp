@@ -21,13 +21,13 @@ MainWindow::MainWindow(QWidget *parent)
     m_stack->setCurrentWidget(m_home);
 
     // Home -> Play (both buttons, different modes)
-    connect(m_home, &HomePage::playTrieRequested, this, [this]() {
-        m_play->setMode(SearchMode::Trie);
-        m_stack->setCurrentWidget(m_play);
+    connect(m_home, &HomePage::playTrieRequested, this, [this](int letters) {
+        if (m_play->startGame(SearchMode::Trie, letters))
+            m_stack->setCurrentWidget(m_play);
     });
-    connect(m_home, &HomePage::playBkTreeRequested, this, [this]() {
-        m_play->setMode(SearchMode::BkTree);
-        m_stack->setCurrentWidget(m_play);
+    connect(m_home, &HomePage::playBkTreeRequested, this, [this](int letters) {
+        if (m_play->startGame(SearchMode::BkTree, letters))
+            m_stack->setCurrentWidget(m_play);
     });
     connect(m_home, &HomePage::quitRequested, this, &QMainWindow::close);
 
@@ -35,6 +35,13 @@ MainWindow::MainWindow(QWidget *parent)
     connect(m_play, &PlayPage::backRequested, this, [this]() {
         m_stack->setCurrentWidget(m_home);
     });
+
+    //testing calling functions from bk tree
+    /*
+    connect(m_play, &PlayPage::wordSubmitted, this, [this](const QString &word) {
+        m_stack->setCurrentWidget(m_home);
+    });
+    */
 
 }
 
