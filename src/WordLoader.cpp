@@ -5,6 +5,11 @@
 #include <fstream>
 #include <iostream>
 #include <algorithm>
+#include <string>
+#include <vector>
+#include <cctype>
+
+
 using namespace std;
 
 std::vector<string> loadWords(const std::string& path, int length);

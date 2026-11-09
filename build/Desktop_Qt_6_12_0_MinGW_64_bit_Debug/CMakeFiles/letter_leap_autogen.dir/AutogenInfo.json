@@ -345,18 +345,6 @@
 	"HEADERS" : 
 	[
 		[
-			"D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/src/Trie.h",
-			"MU",
-			"UVLADIE3JM/moc_Trie.cpp",
-			null
-		],
-		[
-			"D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/src/WordLoader.h",
-			"MU",
-			"UVLADIE3JM/moc_WordLoader.cpp",
-			null
-		],
-		[
 			"D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/src/homepage.h",
 			"MU",
 			"UVLADIE3JM/moc_homepage.cpp",

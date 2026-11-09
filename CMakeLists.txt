@@ -17,10 +17,8 @@ include_directories(src)
 add_executable(letter_leap
     src/main.cpp
     src/Trie.cpp
-    src/Trie.h
     src/BK_Tree.cpp
     src/WordLoader.cpp
-    src/WordLoader.h
     src/mainwindow.h src/mainwindow.cpp src/mainwindow.ui
     src/homepage.h src/homepage.cpp src/homepage.ui
     src/playpage.h src/playpage.cpp src/playpage.ui

@@ -3,7 +3,6 @@
 #include <QStackedWidget>
 #include "homepage.h"
 #include "playpage.h"
-#include "Trie.h"
 
 
 MainWindow::MainWindow(QWidget *parent)

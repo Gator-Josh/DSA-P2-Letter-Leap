@@ -2,7 +2,6 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "BK_Tree.cpp"
 
 class QStackedWidget;
 class HomePage;
@@ -25,7 +24,6 @@ private:
     HomePage *m_home;
     PlayPage *m_play;
     Ui::MainWindow *ui;
-    BK_Tree bk_tree;
 
 };
 
