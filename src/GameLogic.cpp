@@ -2,6 +2,7 @@
 // Created by Lucia Novo on 11/8/26.
 //
 
+#include <list>
 #include <string>
 #include <vector>
 
