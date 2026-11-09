@@ -2,11 +2,17 @@
 // Created by lucyn on 11/8/2026.
 //
 
-#include "WordLoader.h"
 #include <fstream>
 #include <iostream>
 #include <algorithm>
+#include <string>
+#include <vector>
+#include <cctype>
+
+
 using namespace std;
+
+std::vector<string> loadWords(const std::string& path, int length);
 
 vector<string> loadWords(const std::string& path, int length) {
     vector<string> words;

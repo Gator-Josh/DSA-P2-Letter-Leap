@@ -1,0 +1,55 @@
+# ninja log v7
+554	1276	8158941675294463	CMakeFiles/letter_leap.dir/src/BK_Tree.cpp.obj	643db9deceb65889
+537	2491	8158941675122907	CMakeFiles/letter_leap.dir/src/main.cpp.obj	27c7cf388b34d993
+545	978	8158941675198024	CMakeFiles/letter_leap.dir/src/Trie.cpp.obj	10f19d3e46883034
+564	1176	8158941675389677	CMakeFiles/letter_leap.dir/src/WordLoader.cpp.obj	958b6b8b5bc8169e
+3223	3749	8158941701977028	letter_leap.exe	4c41e38e784a1f6c
+12	529	8158941674387858	letter_leap_autogen/timestamp	edbdac42f17a1ae9
+12	529	8158941674387858	letter_leap_autogen/mocs_compilation.cpp	edbdac42f17a1ae9
+12	529	8158941674387858	D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/letter_leap_autogen/timestamp	edbdac42f17a1ae9
+12	529	8158941674387858	D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/letter_leap_autogen/mocs_compilation.cpp	edbdac42f17a1ae9
+530	2577	8158941675047564	CMakeFiles/letter_leap.dir/letter_leap_autogen/mocs_compilation.cpp.obj	7ff1871f05e113b4
+574	2834	8158941675489996	CMakeFiles/letter_leap.dir/src/mainwindow.cpp.obj	94cf60bd7aeab668
+584	2512	8158941675590565	CMakeFiles/letter_leap.dir/src/homepage.cpp.obj	a6ea827b90ab7ae5
+595	3223	8158941675707228	CMakeFiles/letter_leap.dir/src/playpage.cpp.obj	fda8ea97cbea6462
+7	682	8158964638138990	build.ninja	9fb23b15119b0a71
+19	520	8158964660917006	letter_leap_autogen/timestamp	edbdac42f17a1ae9
+19	520	8158964660917006	letter_leap_autogen/mocs_compilation.cpp	edbdac42f17a1ae9
+19	520	8158964660917006	D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/letter_leap_autogen/timestamp	edbdac42f17a1ae9
+19	520	8158964660917006	D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/letter_leap_autogen/mocs_compilation.cpp	edbdac42f17a1ae9
+537	1200	8158964661837189	CMakeFiles/letter_leap.dir/src/Trie.cpp.obj	10f19d3e46883034
+547	1250	8158964661927582	CMakeFiles/letter_leap.dir/src/BK_Tree.cpp.obj	643db9deceb65889
+529	2304	8158964661741945	CMakeFiles/letter_leap.dir/src/main.cpp.obj	27c7cf388b34d993
+520	2370	8158964661661837	CMakeFiles/letter_leap.dir/letter_leap_autogen/mocs_compilation.cpp.obj	7ff1871f05e113b4
+580	2990	8158964662261673	CMakeFiles/letter_leap.dir/src/playpage.cpp.obj	fda8ea97cbea6462
+17	526	8158965699187932	letter_leap_autogen/timestamp	edbdac42f17a1ae9
+17	526	8158965699187932	letter_leap_autogen/mocs_compilation.cpp	edbdac42f17a1ae9
+17	526	8158965699187932	D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/letter_leap_autogen/timestamp	edbdac42f17a1ae9
+17	526	8158965699187932	D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/letter_leap_autogen/mocs_compilation.cpp	edbdac42f17a1ae9
+545	1014	8158965700140501	CMakeFiles/letter_leap.dir/src/WordLoader.cpp.obj	958b6b8b5bc8169e
+535	2011	8158965700045243	CMakeFiles/letter_leap.dir/src/main.cpp.obj	27c7cf388b34d993
+527	2204	8158965699959550	CMakeFiles/letter_leap.dir/letter_leap_autogen/mocs_compilation.cpp.obj	7ff1871f05e113b4
+555	2408	8158965700243504	CMakeFiles/letter_leap.dir/src/mainwindow.cpp.obj	94cf60bd7aeab668
+2408	2906	8158965718769558	letter_leap.exe	4c41e38e784a1f6c
+5	409	8158968624463883	letter_leap_autogen/timestamp	edbdac42f17a1ae9
+5	409	8158968624463883	letter_leap_autogen/mocs_compilation.cpp	edbdac42f17a1ae9
+5	409	8158968624463883	D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/letter_leap_autogen/timestamp	edbdac42f17a1ae9
+5	409	8158968624463883	D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/letter_leap_autogen/mocs_compilation.cpp	edbdac42f17a1ae9
+418	936	8158968625214295	CMakeFiles/letter_leap.dir/src/Trie.cpp.obj	10f19d3e46883034
+426	971	8158968625295026	CMakeFiles/letter_leap.dir/src/BK_Tree.cpp.obj	643db9deceb65889
+410	2048	8158968625134321	CMakeFiles/letter_leap.dir/letter_leap_autogen/mocs_compilation.cpp.obj	7ff1871f05e113b4
+434	2254	8158968625375880	CMakeFiles/letter_leap.dir/src/mainwindow.cpp.obj	94cf60bd7aeab668
+443	2696	8158968625476351	CMakeFiles/letter_leap.dir/src/playpage.cpp.obj	fda8ea97cbea6462
+2696	3226	8158968647995829	letter_leap.exe	4c41e38e784a1f6c
+5	144	8158972429493179	letter_leap_autogen/timestamp	edbdac42f17a1ae9
+5	144	8158972429493179	letter_leap_autogen/mocs_compilation.cpp	edbdac42f17a1ae9
+5	144	8158972429493179	D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/letter_leap_autogen/timestamp	edbdac42f17a1ae9
+5	144	8158972429493179	D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/letter_leap_autogen/mocs_compilation.cpp	edbdac42f17a1ae9
+144	2136	8158972430887794	CMakeFiles/letter_leap.dir/src/playpage.cpp.obj	fda8ea97cbea6462
+2136	2655	8158972450797971	letter_leap.exe	4c41e38e784a1f6c
+15	173	8158973915186359	letter_leap_autogen/timestamp	edbdac42f17a1ae9
+15	173	8158973915186359	letter_leap_autogen/mocs_compilation.cpp	edbdac42f17a1ae9
+15	173	8158973915186359	D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/letter_leap_autogen/timestamp	edbdac42f17a1ae9
+15	173	8158973915186359	D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/letter_leap_autogen/mocs_compilation.cpp	edbdac42f17a1ae9
+173	2324	8158973916773188	CMakeFiles/letter_leap.dir/src/playpage.cpp.obj	fda8ea97cbea6462
+2324	2896	8158973938286597	letter_leap.exe	4c41e38e784a1f6c
