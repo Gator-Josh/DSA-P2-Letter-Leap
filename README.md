@@ -1,22 +1,23 @@
 <H1> COP3530 - Project 2 </h1>
 <h2> How to run our project</h2>
--=-=-ONLY TESTED FOR WINDOWS, BE WARNED-=-=-
-Step 0: Fetch main to your device !!
+<center>-=-=-ONLY TESTED FOR WINDOWS, BE WARNED-=-=-</center> <br>
 
-1: Download the latest version of the community Qt IDE found at https://www.qt.io/development/download
-<img width="1616" height="885" alt="image" src="https://github.com/user-attachments/assets/86d5c573-2264-498b-a5ad-f70d60d83f78" />
+Step 0: Fetch main to your device !!<br>
 
-2: Open the IDE
-<img width="636" height="477" alt="image" src="https://github.com/user-attachments/assets/10b2a7c9-4452-456b-82ab-135231ad9294" />
+1: Download the latest version of the community Qt IDE found at https://www.qt.io/development/download<br>
+<img width="1616" height="885" alt="image" src="https://github.com/user-attachments/assets/86d5c573-2264-498b-a5ad-f70d60d83f78" /><br>
 
-2: Click File then Open Project
-<img width="1279" height="719" alt="image" src="https://github.com/user-attachments/assets/d2f9986b-58f7-43c8-82da-eda2cd6d11d2" />
+2: Open the IDE<br>
+<img width="636" height="477" alt="image" src="https://github.com/user-attachments/assets/10b2a7c9-4452-456b-82ab-135231ad9294" /><br>
 
-3: Navigate to and select the CMakeLists.txt file included in the main branch.
-<img width="1421" height="835" alt="image" src="https://github.com/user-attachments/assets/75fcb4c7-1ba1-46b7-aae6-fae8e822cb8e" />
+2: Click File then Open Project<br>
+<img width="1279" height="719" alt="image" src="https://github.com/user-attachments/assets/d2f9986b-58f7-43c8-82da-eda2cd6d11d2" /><br>
 
-4: Run the project, it should build and open the window without errors!
-<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/64acdfaf-f4d5-4486-bd32-99dda1115d80" />
+3: Navigate to and select the CMakeLists.txt file included in the main branch.<br>
+<img width="1421" height="835" alt="image" src="https://github.com/user-attachments/assets/75fcb4c7-1ba1-46b7-aae6-fae8e822cb8e" /><br>
+
+4: Run the project, it should build and open the window without errors!<br>
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/64acdfaf-f4d5-4486-bd32-99dda1115d80" /><br><br>
 
 
 This is the template for Project 2 repositories. It includes all the assignment instructions and documentation to help you use GitHub.
