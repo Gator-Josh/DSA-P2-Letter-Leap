@@ -201,12 +201,6 @@
 				"file" : 0,
 				"line" : 13,
 				"parent" : 0
-			},
-			{
-				"command" : 9,
-				"file" : 0,
-				"line" : 15,
-				"parent" : 0
 			}
 		]
 	},
@@ -277,10 +271,6 @@
 					"path" : "D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/src"
 				},
 				{
-					"backtrace" : 30,
-					"path" : "D:/Visual Studio Projects/Project 2 DSA/DSA-P2-Letter-Leap/data"
-				},
-				{
 					"backtrace" : 2,
 					"isSystem" : true,
 					"path" : "D:/Qt/6.12.0/mingw_64/include/QtWidgets"
@@ -332,11 +322,11 @@
 	"dependencies" : 
 	[
 		{
-			"id" : "letter_leap_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
-		},
-		{
 			"backtrace" : 0,
 			"id" : "letter_leap_autogen::@6890427a1f51a3e7e1df"
+		},
+		{
+			"id" : "letter_leap_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "letter_leap::@6890427a1f51a3e7e1df",
